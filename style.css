@@ -15,17 +15,30 @@ img{
   height: auto;
 }
 
-button{
-  padding: 0.5rem 1.4rem;
+.btn{
+  padding: 0.3rem 1.5rem;
   border: 0;
   text-decoration: none;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 2px;
+  background: #2c3e50;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px white;
+}
+
+.wrapper{
+  display: grid;
+  grid-gap: 15px;
 }
 
 .nav ul{
   display: grid;
   list-style: none;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  padding: 0;
 }
 
 .nav a{
@@ -33,15 +46,94 @@ button{
   text-decoration: none;
   background-color: white;
   display: block;
-  padding: 0.8rem;
+  padding: 0.5rem;
   text-align: center;
   border-radius: 4px;
   box-shadow: 1px 1px 2px white;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .nav a:hover{
   color: white;
   background: black;
+}
+
+.top-container{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 15px;
+}
+
+.hdr{
+  min-height: 250px;
+  background: url("img/thomas-kelley-78865-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+}
+
+.hdr h1{
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.hdr p{
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.top-box{
+  background: #40739e;
+  padding: 1rem;
+  border: solid 2px white;
+  border-radius: 3px;
+}
+
+.boxes{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box{
+  background: #40739e;
+  padding: 1rem;
+  text-align: center;
+  border: solid 2px white;
+  border-radius: 3px;
+}
+
+.info{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  background: #40739e;
+  border: solid 2px white;
+  border-radius: 3px;
+}
+
+footer{
+  background: #40739e;
+  border: solid 2px white;
+  border-radius: 3px;
+  text-align: center;
+}
+
+/*  */
+@media(max-width: 600px){
+  .top-container{
+    grid-template-columns: 1fr;
+  }
+
+  .info{
+    grid-template-columns: 1fr;
+  }
+
+  .btn{
+    text-align: center;
+    width: 100%;
+  }
+
 }
