@@ -12,6 +12,17 @@
   <body>
     <div class="wrapper">
       <!-- Navigation -->
+
+      <a href="#" class="bar" onclick="showMenu()"><i class="fas fa-bars fa-3x"></i></a>
+
+      <nav id="aside-nav">
+        <a href="#" onclick="hideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Project</a>
+        <a href="#">Contact</a>
+      </nav>
+
       <nav class="nav">
         <ul>
           <li><a href="#">Home</a></li>
@@ -83,6 +94,14 @@
         <p>Jakub Mrówczyński</p>
       </footer>
       </div>
-    <!-- wrapper end -->
+      <script type="text/javascript">
+        function showMenu(){
+          document.getElementById('aside-nav').style.transform = "translateX(-150px)";
+        }
+        function hideMenu(){
+          document.getElementById('aside-nav').style.transform = "translateX(0)";
+        }
+      </script> -->
+    <!-- wrapper end
   </body>
 </html>
